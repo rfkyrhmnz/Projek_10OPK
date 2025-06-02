@@ -1,0 +1,227 @@
+:root {
+  --color-primary: #a45c00; /* tembaga */
+  --color-primary-dark: #7d4600;
+  --color-secondary: #f9f4ec; /* krem muda */
+  --color-text: #3b2f2f;
+  --color-bg: #fffaf0;
+  --shadow: rgba(164, 92, 0, 0.3);
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: var(--color-primary);
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: var(--color-secondary);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+header .tagline {
+  font-weight: 300;
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 40px 0;
+}
+
+/* Intro Text */
+.intro-text, .intro p {
+  text-align: justify;
+  text-justify: inter-word; /* agar spasi antar kata lebih rapi */
+}
+
+/* Intro with image layout */
+.intro.with-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 0 15px;
+  text-align: center; /* center text */
+}
+
+.intro.with-image .text-content,
+.intro.with-image .image-content {
+  flex: 1 1 350px;
+  min-width: 280px;
+}
+
+.intro.with-image .image-content {
+  max-width: 200%;
+  max-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(164, 92, 0, 0.3);
+  margin: 0 auto;
+}
+
+.intro.with-image .image-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Intro without image */
+.intro {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.intro h2 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color: var(--color-primary-dark);
+}
+
+.intro p {
+  font-size: 1.15rem;
+  color: #5a4a3f;
+  line-height: 1.8;
+}
+
+/* Grid menu */
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 25px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  background: var(--color-secondary);
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px var(--shadow);
+  text-decoration: none;
+  color: var(--color-primary-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-card:hover,
+.menu-card:focus {
+  box-shadow: 0 10px 30px var(--color-primary);
+  transform: translateY(-8px);
+  outline: none;
+}
+
+.menu-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.8px;
+}
+
+.menu-card p {
+  font-weight: 500;
+  color: #6e574a;
+  font-size: 1rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+/* Footer */
+footer {
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  text-align: center;
+  padding: 18px 0;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 -4px 12px var(--shadow);
+  margin-top: auto;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .intro.with-image {
+    flex-direction: column;
+  }
+  .intro.with-image .image-content {
+    margin-top: 25px;
+  }
+
+  header .logo {
+    font-size: 2.2rem;
+  }
+
+  header .tagline {
+    font-size: 1rem;
+  }
+
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .intro p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+  .menu-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 1.8rem;
+  }
+}
