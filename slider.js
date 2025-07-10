@@ -1,8 +1,8 @@
 const images = [
-  "../images/orem1.jpg",
-  "../images/orem2.jpg",
-  "../images/orem3.jpg",
-  "../images/orem4.jpg"
+  "../../../images/IMG20250604091134.jpg",
+  "../../../images/IMG20250604092255 (1).jpg",
+  "i../../../mages/IMG20250604092255.jpg",
+ 
 ];
 
 let currentIndex = 0;
