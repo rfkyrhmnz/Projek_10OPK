@@ -1,7 +1,7 @@
 const images = [
-  "../../../images/IMG20250604091134.jpg",
-  "../../../images/IMG20250604092255 (1).jpg",
-  "i../../../mages/IMG20250604092255.jpg",
+  "../images/ormoremjodipan/IMG20250604091134.jpg",
+  "../images/oremoremjodipan/IMG20250604092255 (1).jpg",
+  "../mages/oremoremjodipan/IMG20250604092255.jpg",
  
 ];
 
