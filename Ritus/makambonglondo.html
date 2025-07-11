@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Makam Bong Londo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Ritus - 10 OPK Kota Malang</h1>
+      <p class="tagline">Portal Pemajuan Kebudayaan Kota Malang</p>
+      <nav><a href="../../mainpage.html">← Kembali ke Beranda</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Makam Bong Londo</h2>
+      <p>Orem-orem Ketupat Abah Syahri adalah salah satu kuliner khas Malang yang telah dijajakan sejak tahun 1983 oleh Abah Syahri, bermula dari harga Rp150 hingga kini mencapai Rp10.000 per porsi. Usaha ini dirintis dari lingkungan keluarga dan masih dijalankan secara turun-temurun di kawasan Jodipan. Bahan-bahan utamanya terdiri dari ketupat, tempe, dan kecambah, dengan penggunaan santan alami hasil perasan manual, bukan santan instan, guna menjaga rasa khas dan ketahanan makanan. Proses memasak dilakukan secara tradisional dan membutuhkan waktu lama, terutama untuk merebus ketupat besar yang bisa memakan waktu hingga 10 jam, biasanya dimulai selepas salat Isya hingga menjelang Subuh. Resep bumbu yang digunakan tetap mempertahankan keaslian tanpa tambahan bahan modern, mengandalkan rempah-rempah tradisional untuk menjaga cita rasa dan budaya yang melekat. Filosofi penggunaan ketupat pun erat kaitannya dengan nilai silaturahmi. Pelanggan utama berasal dari kalangan menengah ke bawah seperti tukang becak dan pengemudi ojek. Meskipun sempat terdampak pandemi COVID-19, usaha ini tetap berjalan, walau sempat mengalami penurunan pembeli. Peran media sosial sangat membantu memperluas jangkauan promosi, terutama sejak viral pada tahun 2017 lewat blogger dan studi mahasiswa. Kini, usaha tersebut dikelola oleh keluarga, dengan keinginan generasi penerus untuk membuka cabang, meski terkendala kekhawatiran dari orang tua terkait biaya operasional dan keberlangsungan usaha. Sambal yang digunakan pun buatan sendiri, melalui proses pengeringan dan pengolahan khusus agar tetap aman dan nikmat. Meskipun makanan modern terus bermunculan, Orem-Orem Ketupat ini tetap menjadi warisan kuliner yang dijaga keasliannya.</p>
+    </section>
+
+    <!-- SLIDER -->
+    <section class="image-slider">
+      <div class="slider-container">
+        <button class="prev">&#10094;</button>
+        <img src="../images/oremoremjodipan/IMG20250604091134.jpg" alt="Orem Orem 1" class="slider-image" />
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 10 OPK Kota Malang</p>
+    </div>
+  </footer>
+
+  <script>
+    const images = [
+      "../images/oremoremjodipan/IMG20250604091134.jpg",
+      "../images/oremoremjodipan/IMG20250604092255 (1).jpg",
+      "../images/oremoremjodipan/IMG20250604092255.jpg",
+    ];
+
+    let currentIndex = 0;
+    const sliderImage = document.querySelector(".slider-image");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+
+    function updateImage() {
+      sliderImage.src = images[currentIndex];
+    }
+
+    prevButton.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    });
+  </script>
+</body>
+</html>
