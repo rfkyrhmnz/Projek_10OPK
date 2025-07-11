@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Topeng Malangan (Pakisaji) </title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Seni - 10 OPK Kota Malang</h1>
+      <p class="tagline">Portal Pemajuan Kebudayaan Kota Malang</p>
+      <nav><a href="../../mainpage.html">← Kembali ke Beranda</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h2>Topeng Malangan (Pakisaji) </h2>
+      <p>Sanggar Topeng Malangan Asmorobangun merupakan sanggar seni tradisional yang telah diwariskan secara turun-temurun selama lima generasi, dengan Pak Handoyo sebagai penerus generasi kelima. Sanggar ini berfokus pada pelestarian seni wayang topeng Malang, terutama cerita Panji yang menggambarkan kisah kerajaan Jenggala dan Kediri. Topeng yang digunakan dibuat sendiri oleh Pak Handoyo dari berbagai jenis kayu seperti sengon, nangka, bule, beringin, dan kembang. Saat ini terdapat 76 karakter topeng yang dimiliki sanggar. Pertunjukan wayang topeng dulunya berdurasi 9–10 jam dan terdiri dari berbagai struktur seperti giro, tari pembuka (biskalan patih), jejer, sigeg (sesi jeda atau penyampaian informasi), hingga tari penutup. Setiap pertunjukan menggunakan atribut lengkap seperti topeng yang diikat, kostum tradisional, rambut palsu, mahkota, staget, kalung, kelat bahu, hingga senjata dan aksesoris khas.
+
+Latihan di sanggar diadakan setiap hari Minggu dan terbuka untuk semua kalangan, mulai anak usia prasekolah hingga dewasa. Dulu pelatihan tidak dipungut biaya, tetapi pasca-pandemi dikenakan biaya Rp10.000 per bulan untuk kebutuhan operasional. Sanggar ini aktif dalam berbagai event nasional dan internasional, bahkan pernah tampil di Thailand dan Rusia. Selain pertunjukan, inovasi dilakukan dalam bentuk pembuatan souvenir topeng yang kini banyak diminati, bahkan dipesan hingga ke luar negeri, meski terkadang biaya kirim lebih mahal dari harga topeng itu sendiri. Tantangan utama dalam pelestarian adalah regenerasi, karena banyak anak muda yang setelah lulus SMA memilih kuliah atau bekerja di luar kota.
+
+Pelestarian seni ini juga didukung oleh program pendidikan seperti P5 di sekolah, yang mendorong murid untuk mengenal budaya daerah. Sanggar pun sering menerima kunjungan sekolah dan komunitas untuk belajar menari, mewarnai topeng, hingga memainkan gamelan. Promosi modern dilakukan melalui media sosial oleh para murid muda. Pak Handoyo tidak menuntut anak-anaknya untuk meneruskan, tetapi menanamkan nilai bahwa kesenian ini adalah warisan keluarga yang membawa manfaat dan memperluas relasi. Event terdekat sanggar adalah kegiatan nyadran dan pertunjukan seni anak-anak yang akan diadakan tanggal 27 di punden dan sanggar, sebagai bentuk doa, pertunjukan, dan pelestarian spiritual sekaligus budaya.</p>
+    </section>
+
+    <!-- SLIDER -->
+    <section class="image-slider">
+      <div class="slider-container">
+        <button class="prev">&#10094;</button>
+        <img src="../images/topengmalanganpakisaji/" alt="Orem Orem 1" class="slider-image" />
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 10 OPK Kota Malang</p>
+    </div>
+  </footer>
+
+  <script>
+    const images = [
+      "../images/topengmalanganpakisaji/",
+      "../images/topengmalanganpakisaji/",
+      "../images/topengmalanganpakisaji/",
+      "../images/topengmalanganpakisaji/",
+      
+    ];
+
+    let currentIndex = 0;
+    const sliderImage = document.querySelector(".slider-image");
+    const prevButton = document.querySelector(".prev");
+    const nextButton = document.querySelector(".next");
+
+    function updateImage() {
+      sliderImage.src = images[currentIndex];
+    }
+
+    prevButton.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    });
+
+    nextButton.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    });
+  </script>
+</body>
+</html>
